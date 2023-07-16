@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heart Diseases Prediction</title>
+    <link rel="stylesheet" type="text/css" href="home.css" />
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+
+      header {
+        background-color: #1a69b8;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .mainheader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo img {
+        height: 80px;
+        border-radius: 40px;
+      }
+
+      #navbar {
+        display: flex;
+        gap: 20px;
+      }
+
+      #navbar a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 8px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      #navbar a:hover {
+        background-color: #26b2f9;
+      }
+
+      main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+      }
+
+      .left-sec {
+        flex: 1;
+        text-align: center;
+        color: #333333;
+      }
+
+      .left-sec h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      .left-sec h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+
+      .left-sec p {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+
+      .left-sec button {
+        padding: 12px 24px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      .left-sec button a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+
+      .left-sec button:hover {
+        background-color: #0056b3;
+      }
+
+      .right-sec {
+        flex: 1;
+      }
+
+      .right-sec figure {
+        text-align: center;
+      }
+
+      .right-sec img {
+        max-width: 100%;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="mainheader">
+        <div class="logo">
+          <img
+            src="https://placehold.co/600x400/1a69b8/white?text=The\nTomorrow"
+            alt="Logo"
+          />
+        </div>
+
+        <nav id="navbar">
+          <a href="index.html">Home</a>
+          <a href="/pages/signup.html">SignUp</a>
+          <a href="/pages/login.html">Login</a>
+          <a href="/pages/about.html">About Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="left-sec">
+        <h1>We are here for your care</h1>
+        <h2>DO YOUR PART...CARE FOR YOUR HEART</h2>
+        <p>Check you heart health using our free tool</p>
+        <button>
+          <a href="/pages/signup.html">Check Here</a>
+        </button>
+      </section>
+
+      <section class="right-sec">
+        <figure>
+          <img src="img/23670.jpg" alt="Placeholder Image" />
+        </figure>
+      </section>
+    </main>
+  </body>
+</html>

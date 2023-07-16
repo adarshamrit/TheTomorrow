@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif, sans-serif;
+        background-image: url(/img/23670.jpg);
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .form-container {
+        background-color: #ffffff;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+      }
+
+      .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333333;
+      }
+
+      .form-container input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .form-container button {
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 12px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .form-container button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Login Form</h2>
+      <form action="#">
+        <div>
+          <input type="email" name="email" id="email" placeholder="Email" />
+        </div>
+        <div>
+          <input type="password" id="pass" placeholder="Password" />
+        </div>
+        <button type="button" onClick="saveData()">Submit</button>
+      </form>
+    </div>
+
+    <script>
+      function saveData() {
+        let email = document.getElementById("email").value;
+        let psw = document.getElementById("pass").value;
+
+        let user_records = JSON.parse(localStorage.getItem("users")) || [];
+
+        if (user_records.some((v) => v.email === email && v.psw === psw)) {
+          alert("Login Successful");
+          let current_user = user_records.find(
+            (v) => v.email === email && v.psw === psw
+          );
+          localStorage.setItem("name", current_user.name);
+          localStorage.setItem("email", current_user.email);
+          window.location.href = "result.html";
+        } else {
+          alert("Login Failed. Invalid email or password.");
+        }
+      }
+    </script>
+  </body>
+</html>
